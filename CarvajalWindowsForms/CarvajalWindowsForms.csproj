@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C35C1807-D8AE-40FA-BBE4-5316A527A344}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CarvajalWindowsForms</RootNamespace>
+    <AssemblyName>CarvajalWindowsForms</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Adgv.cs" />
+    <Compile Include="Admin\Angv.cs" />
+    <Compile Include="Admin\DetalleVuelos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\DetalleVuelos.Designer.cs">
+      <DependentUpon>DetalleVuelos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\GestionarVuelos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\GestionarVuelos.Designer.cs">
+      <DependentUpon>GestionarVuelos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClsConexionDB.cs" />
+    <Compile Include="ClsInicio.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\AdAccesoSistema.cs" />
+    <Compile Include="Login\AnAccesoSistema.cs" />
+    <Compile Include="Login\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\clsADMenu.cs" />
+    <Compile Include="Menu\clsANMenu.cs" />
+    <Compile Include="Menu\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserClient\AdClient.cs" />
+    <Compile Include="UserClient\AnClient.cs" />
+    <Compile Include="UserClient\ConsultarVuelos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserClient\ConsultarVuelos.Designer.cs">
+      <DependentUpon>ConsultarVuelos.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin\DetalleVuelos.resx">
+      <DependentUpon>DetalleVuelos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\GestionarVuelos.resx">
+      <DependentUpon>GestionarVuelos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserClient\ConsultarVuelos.resx">
+      <DependentUpon>ConsultarVuelos.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\Thumbs.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\10.png" />
+    <Content Include="Resources\Abajo.PNG" />
+    <Content Include="Resources\absent-blue-icon.jpg" />
+    <Content Include="Resources\AddressBook-Black-icon.jpg" />
+    <Content Include="Resources\Adicionar.png" />
+    <Content Include="Resources\Adicionar1.png" />
+    <Content Include="Resources\Administrator-icon.jpg" />
+    <Content Include="Resources\AlumnDesert.png" />
+    <Content Include="Resources\Application-icon.jpg" />
+    <Content Include="Resources\apply.png" />
+    <Content Include="Resources\apply1.png" />
+    <Content Include="Resources\apply16x16.png" />
+    <Content Include="Resources\apply16x161.png" />
+    <Content Include="Resources\ark.png" />
+    <Content Include="Resources\ark1.png" />
+    <Content Include="Resources\ark2.png" />
+    <Content Include="Resources\ark21.png" />
+    <Content Include="Resources\Arriba.PNG" />
+    <Content Include="Resources\article 48.png" />
+    <Content Include="Resources\article 481.png" />
+    <Content Include="Resources\article 482.png" />
+    <Content Include="Resources\bgr.bmp" />
+    <Content Include="Resources\bird-icon.jpg" />
+    <Content Include="Resources\Body-Care-icon.jpg" />
+    <Content Include="Resources\BOOK06.ICO" />
+    <Content Include="Resources\boss-icon.jpg" />
+    <Content Include="Resources\box-1-icon.jpg" />
+    <Content Include="Resources\box-vista-business-icon.jpg" />
+    <Content Include="Resources\BRIDJUST.BMP" />
+    <Content Include="Resources\BRIDJUST1.BMP" />
+    <Content Include="Resources\Buscar.png" />
+    <Content Include="Resources\Buscar1.png" />
+    <Content Include="Resources\Buscar11.png" />
+    <Content Include="Resources\Buscar2.png" />
+    <Content Include="Resources\Button-Play-icon.jpg" />
+    <Content Include="Resources\button_cancel.png" />
+    <Content Include="Resources\Calculator-icon.jpg" />
+    <Content Include="Resources\Calendar-icon.jpg" />
+    <Content Include="Resources\Cancelar.png" />
+    <None Include="Resources\carvajal.png" />
+    <Content Include="Resources\cheff-icon.jpg" />
+    <Content Include="Resources\coffee-machine-icon.jpg" />
+    <Content Include="Resources\Computer-3-icon.jpg" />
+    <Content Include="Resources\Config.ico" />
+    <Content Include="Resources\Contacts.png" />
+    <Content Include="Resources\CS2-Premium-icon.jpg" />
+    <Content Include="Resources\Dashboard-icon.jpg" />
+    <Content Include="Resources\Delete.png" />
+    <Content Include="Resources\Desktop-Settings-icon.jpg" />
+    <Content Include="Resources\Devuelve.png" />
+    <Content Include="Resources\display-icon.jpg" />
+    <Content Include="Resources\Earth-and-Moon-icon.jpg" />
+    <Content Include="Resources\Earth-icon.jpg" />
+    <Content Include="Resources\Editar.png" />
+    <Content Include="Resources\Editar1.png" />
+    <Content Include="Resources\editcopy.png" />
+    <Content Include="Resources\editdelete.png" />
+    <Content Include="Resources\editdelete1.png" />
+    <Content Include="Resources\edit_add.png" />
+    <Content Include="Resources\ElimImagen.jpg" />
+    <Content Include="Resources\Eliminar.png" />
+    <Content Include="Resources\Eliminar1.png" />
+    <Content Include="Resources\Eliminar11.png" />
+    <Content Include="Resources\Eliminar2.png" />
+    <Content Include="Resources\Eliminar21.png" />
+    <Content Include="Resources\Eliminar3.png" />
+    <Content Include="Resources\email-48.png" />
+    <Content Include="Resources\email-481.png" />
+    <Content Include="Resources\EXAMINAR.BMP" />
+    <Content Include="Resources\exit.png" />
+    <Content Include="Resources\exit1.png" />
+    <Content Include="Resources\family-icon.jpg" />
+    <Content Include="Resources\filenew.png" />
+    <Content Include="Resources\fileprint.png" />
+    <Content Include="Resources\fileprint1.png" />
+    <Content Include="Resources\Files-text.png" />
+    <Content Include="Resources\Film-icon.jpg" />
+    <Content Include="Resources\find.png" />
+    <Content Include="Resources\Fire-icon.jpg" />
+    <Content Include="Resources\Firefox-icon.jpg" />
+    <Content Include="Resources\Floppy.png" />
+    <Content Include="Resources\Floppy1.png" />
+    <Content Include="Resources\Floppy11.png" />
+    <Content Include="Resources\Floppy2.png" />
+    <Content Include="Resources\folder-apple-with-file-icon.jpg" />
+    <Content Include="Resources\Folder-Desktop-icon.jpg" />
+    <Content Include="Resources\folder-explorer-icon.jpg" />
+    <Content Include="Resources\Folder-Music-icon.jpg" />
+    <Content Include="Resources\folder-web-icon.jpg" />
+    <Content Include="Resources\folders-links-icon.jpg" />
+    <Content Include="Resources\folder_doments.png" />
+    <Content Include="Resources\folder_doments1.png" />
+    <Content Include="Resources\Fondo.bmp" />
+    <Content Include="Resources\Fondo1.bmp" />
+    <Content Include="Resources\Fondo2.bmp" />
+    <Content Include="Resources\fondo3.bmp" />
+    <Content Include="Resources\fonfor.bmp" />
+    <Content Include="Resources\globe-icon.jpg" />
+    <Content Include="Resources\globe-sextant-icon.jpg" />
+    <Content Include="Resources\Globe.png" />
+    <Content Include="Resources\Globe1.png" />
+    <Content Include="Resources\Green-round-haus-icon.gif" />
+    <Content Include="Resources\Guardar.png" />
+    <Content Include="Resources\Head-physician-icon.jpg" />
+    <Content Include="Resources\hiro-icon.jpg" />
+    <Content Include="Resources\Hole-punch-icon.jpg" />
+    <Content Include="Resources\Hollywood-Ticket-icon.jpg" />
+    <Content Include="Resources\huella.jpg" />
+    <Content Include="Resources\iLab-icon.jpg" />
+    <Content Include="Resources\images-icon.jpg" />
+    <Content Include="Resources\iPhone-alt-icon.jpg" />
+    <Content Include="Resources\iPod-black-icon.jpg" />
+    <Content Include="Resources\iPod-icon.jpg" />
+    <Content Include="Resources\iPod-mini-green-icon.jpg" />
+    <Content Include="Resources\iPod-nano-1-icon.jpg" />
+    <Content Include="Resources\ipod-santaclaus-icon.jpg" />
+    <Content Include="Resources\iPod-shuffle-icon.jpg" />
+    <Content Include="Resources\iPod-Video-Black-icon.jpg" />
+    <Content Include="Resources\kaddressbook.png" />
+    <Content Include="Resources\kaddressbook1.png" />
+    <Content Include="Resources\lightning-sign-icon.jpg" />
+    <Content Include="Resources\listaAlumnos.png" />
+    <Content Include="Resources\lists.png" />
+    <Content Include="Resources\lists1.png" />
+    <Content Include="Resources\lock-icon.jpg" />
+    <Content Include="Resources\Login.png" />
+    <Content Include="Resources\Login1.png" />
+    <Content Include="Resources\logo bgr.jpg" />
+    <Content Include="Resources\logosinpuntas.png" />
+    <Content Include="Resources\logoutap.png" />
+    <Content Include="Resources\Mac-mini-Apple-Remote-icon.jpg" />
+    <Content Include="Resources\MainLayoutPanel.BackgroundImage.png" />
+    <Content Include="Resources\Metal-icon.jpg" />
+    <Content Include="Resources\Microsoft-Zune-icon.jpg" />
+    <Content Include="Resources\Movies-black-icon.jpg" />
+    <Content Include="Resources\Movies-icon.jpg" />
+    <Content Include="Resources\Music-icon.jpg" />
+    <Content Include="Resources\My-computer-icon.jpg" />
+    <Content Include="Resources\my_documents.png" />
+    <Content Include="Resources\my_documents1.png" />
+    <Content Include="Resources\napoleon-icon.jpg" />
+    <Content Include="Resources\Network-Connection-Control-Panel-icon.jpg" />
+    <Content Include="Resources\NOVISITA.BMP" />
+    <Content Include="Resources\Nuevo-logo.png" />
+    <Content Include="Resources\nurse-icon.jpg" />
+    <Content Include="Resources\orange-sticker-badges-244-icon.jpg" />
+    <Content Include="Resources\owl-icon.jpg" />
+    <Content Include="Resources\parachute-icon.jpg" />
+    <Content Include="Resources\Pasa.png" />
+    <Content Include="Resources\payment.png" />
+    <Content Include="Resources\Phone-icon.jpg" />
+    <Content Include="Resources\Photoshop-CS-2-icon.jpg" />
+    <Content Include="Resources\Photoshop-icon.jpg" />
+    <Content Include="Resources\Preppy-icon.jpg" />
+    <Content Include="Resources\Previsualizar.png" />
+    <Content Include="Resources\Previsualizar1.png" />
+    <Content Include="Resources\Safari-icon.jpg" />
+    <Content Include="Resources\SALIDA.BMP" />
+    <Content Include="Resources\Salir.png" />
+    <Content Include="Resources\Search.png" />
+    <Content Include="Resources\Search1.png" />
+    <Content Include="Resources\Search2.png" />
+    <Content Include="Resources\SECURL.ICO" />
+    <Content Include="Resources\Sent-Mail-icon.jpg" />
+    <Content Include="Resources\Sin_Foto.JPG" />
+    <Content Include="Resources\Sunny-Period-icon.jpg" />
+    <Content Include="Resources\symbol-icon.jpg" />
+    <Content Include="Resources\TIERRA.BMP" />
+    <Content Include="Resources\User-icon.jpg" />
+    <Content Include="Resources\viewmag.png" />
+    <Content Include="Resources\viewmag1.png" />
+    <Content Include="Resources\xeyes.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
